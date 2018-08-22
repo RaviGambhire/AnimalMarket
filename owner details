@@ -1,0 +1,27 @@
+owner details
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Owner details</title>
+</head>
+<body>
+<?php include('header.php') ?>
+<div class="container">
+	
+<h1>This page contains owner details</h1>
+	<div class="jumbotron">
+		<div class="row">
+			<div class="col-sm-8">
+				<h3>Name : </h3>Anand
+				<h3>Phone : </h3> 9669696996
+				<h3>Address: </h3>At Kumbhargaon Tq Biloli,Dist Nanded
+			</div>
+			<div class="col-sm-4">
+				<img src="images/imagesSmp.jpg" class="img-responsive img-circle" alt="Responsive image">
+
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
