@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
 </head>
 <body>
-<?php include('header.php') ?>
+<?php include('header.php') ?> 
+<?php 
+//connect to database
+	$conn = mysqli_connect('localhost','root','','animalbazar');?>
 <div class="container">
 	<div class="jumbotron">
 		<div class="row">
