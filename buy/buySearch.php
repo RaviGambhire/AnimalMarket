@@ -13,6 +13,12 @@
     </style>
 </head>
 <body>  
+  <?php 
+     //create connection
+     //fetch  data from database
+    //assign to variables
+  
+  ?>
     <div class="container-fluid">
   <?php include('../header.php') ?>
   <div class="jumbotron">
