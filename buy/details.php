@@ -12,6 +12,21 @@
 
 <div class="jumbotron">
   <div class="row">
+    <?php 
+      //connect to database
+	    $conn = mysqli_connect('localhost','root','','animalBazaar');
+         //query to retrieve data from database
+        $query = "SELECT * FROM animal_details";
+        $sql_get_data =mysqli_query($conn, $query) or die('Error querying database.');
+          echo "<br/>";
+        //Step3 display data
+        if (mysqli_num_rows($sql_get_data) > 0) {
+          // output data of each row
+            while($row = mysqli_fetch_assoc($sql_get_data)) {
+                echo "id: " . $row["Name"]. " - Name: " . $row["email"]. " " . $row["phone_no"]. "<br>";
+            }
+        }
+    ?>
     <h3>Animal Photos</h3>
      <div class="col-sm-3">
         <div class="card">
