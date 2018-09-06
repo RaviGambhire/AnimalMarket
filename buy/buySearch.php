@@ -13,18 +13,14 @@
     </style>
 </head>
 <body>  
-  <?php 
-     //create connection
-     //fetch  data from database
-    //assign to variables
-  
-  ?>
+
     <div class="container-fluid">
   <?php include('../header.php') ?>
   <div class="jumbotron">
     <div class="color">
     <form method="POST" action = "save.php">
     <div class="row">
+       
       <div class="col-sm-3">
         <div class="form-group">
           <label for="email">State:</label>
@@ -54,7 +50,32 @@
   </div>
    <br/><br/>  
   <div class="row">
-     <div class="col-sm-3">
+     <?php 
+         //create connection
+         $conn = mysqli_connect('localhost','root','','animalBazaar');
+         //fetch  data from database
+        $query = "SELECT * FROM animal_details";
+        $sql_get_data =mysqli_query($conn, $query) or die('Error querying database.');
+        //assign to variables
+       if (mysqli_num_rows($sql_get_data) > 0) {
+        while($row = mysqli_fetch_assoc($sql_get_data)) {
+          $i=0;?>
+            <div class="col-sm-3">
+              <div class="card">
+                <a href="details.php">
+                  <img src="images\12.jpg" alt="Avatar" style="width:60%">
+                  <h4><b><?php ($row[i]["AnimalName"] ?></b></h4> 
+                  <p>Madhav</p>
+                  <p><?php $row[i]["AnimalPrice"]</p>
+                </a>  
+              </div>
+            </div>
+       <?php                         
+             i++; 
+        }
+       }
+      ?>
+    <!-- <div class="col-sm-3">
         <div class="card">
           <a href="details.php">
             <img src="images\12.jpg" alt="Avatar" style="width:60%">
@@ -89,10 +110,10 @@
             <p>Shyam</p>
           </a>  
         </div>
-      </div> 
+      </div> -->
   </div>
   <br>
-  <div class="row">
+ <!-- <div class="row">
      <div class="col-sm-3">
         <div class="card">
           <a href="details.php">
@@ -168,4 +189,4 @@
           </a>  
         </div>
       </div> 
-  </div>
+  </div>-->
