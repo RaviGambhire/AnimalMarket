@@ -26,7 +26,7 @@
 <div class="container">
   <div class="jumbotron image" id="jumbotron-back">
       <div class="text-center" id="txt">
-        <h1 style="color: white">Animal Bazar</h1>
+        <h1 style="color: white">Animal Bazar .in</h1>
       </div>
       <br/><br/><br/>
       <div class="container-fluid">
