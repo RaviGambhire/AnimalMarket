@@ -1,6 +1,6 @@
 <?php
 //connect to database
-	$conn = mysqli_connect('localhost','root','','animal_bazaar');
+	$conn = mysqli_connect('localhost','root','','animalbazar');
 	
 if(isset($_POST['submit'])) {
 	 //or die('Error connecting to MySQL server.');

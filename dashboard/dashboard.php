@@ -7,7 +7,7 @@
 </head>
 <body>
 <?php 
-$conn = mysqli_connect('localhost','root','','animal_bazaar');
+$conn = mysqli_connect('localhost','root','','animalbazar');
               session_start();
               $email = $_SESSION['email'];
 
@@ -61,8 +61,7 @@ $conn = mysqli_connect('localhost','root','','animal_bazaar');
 					    	$photo = $row['animalPhoto1'];
 					    	$src = "../images/farmer_animal_photo/".$photo;
 					    	echo $src;
-					    	$image ='<img src= "'.$src.'" class="img-responsive img-circle" alt="Responsive image">'
-					    	echo $image;
+					    	$image ='<img src= "'.$src.'" class="img-responsive img-circle" alt="Responsive image">';
 					    	?>
 					       <div class="col-sm-3"><a href="../sell/animalDetails.php"><?php $image;?></a></div>
 					    <?php }
