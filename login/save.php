@@ -1,6 +1,6 @@
 <?php
 //connect to database
-	$conn = mysqli_connect('localhost','root','','animalbazar');
+	$conn = mysqli_connect('localhost','root','','animal_bazaar');
 	
 if(isset($_POST['submit'])) {
 	 //or die('Error connecting to MySQL server.');
@@ -42,7 +42,9 @@ if(isset($_POST['login'])) {
    
 		//Step3 display data
 		if (mysqli_num_rows($sql_get_data) > 0) {
-			 header('location:../sell/sell2.php');
+			session_start();
+			$_SESSION['email'] = $email;
+			header('location:../dashboard/dashboard.php');
 	    // output data of each row
 		    while($row = mysqli_fetch_assoc($sql_get_data)) {
 		    	echo "<br/>";
